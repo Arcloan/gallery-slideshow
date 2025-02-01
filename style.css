@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+@theme {
+    --font-Libre: "Libre Baskerville";
+    --color-black: #000000;
+    --color-darkGrey: #7D7D7D;
+    --color-lightGray: #E5E5E5;
+    --color-almostWhite: #F3F3F3;
+    --color-white: #FFFFFF;
+}
