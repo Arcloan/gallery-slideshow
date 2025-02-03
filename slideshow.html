@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
@@ -12,9 +13,84 @@
       <button
         class="text-darkGrey text-xs tracking-wider uppercase hover:cursor-pointer hover:text-black"
       >
-        start slideshow
+        <a href="./index.html">stop slideshow</a>
       </button>
     </header>
     <hr class="text-lightGray mx-auto mb-6 lg:max-w-[90%]" />
+    <main>
+      <article
+        class="customGrid mx-auto grid max-w-[90%] grid-cols-(--grid-cols) grid-rows-(--grid-rows)"
+      >
+        <div class="image relative z-[-1]">
+          <img
+            src="./assets/starry-night/hero-small.jpg"
+            alt=""
+            class="h-[280px] w-full object-cover md:h-full"
+          />
+          <button
+            class="absolute top-4 left-4 flex gap-4 bg-black/70 px-4 py-3 text-sm font-light text-white uppercase hover:cursor-pointer"
+          >
+            <img src="./assets/shared/icon-view-image.svg" alt="" />view image
+          </button>
+        </div>
+        <div class="workTitle max-w-[80%] bg-white pt-4 pb-16 pl-4">
+          <h2 class="text-3xl font-bold">Starry Night</h2>
+          <h3 class="text-darkGrey text-xl">Vincent Van Gogh</h3>
+        </div>
+        <div class="authorPic">
+          <img
+            src="./assets/starry-night/artist.jpg"
+            alt=""
+            class="ml-4 size-16 md:size-32"
+          />
+        </div>
+        <div class="description relative -mt-12">
+          <p class="date text-almostWhite absolute right-0 text-[130px]">
+            1889
+          </p>
+          <p class="text-darkGrey relative z-1 mt-32 mb-12">
+            Although The Starry Night was painted during the day in Van Gogh's
+            ground-floor studio, it would be inaccurate to state that the
+            picture was painted from memory. The view has been identified as the
+            one from his bedroom window, facing east, a view which Van Gogh
+            painted variations of no fewer than twenty-one times, including The
+            Starry Night. "Through the iron-barred window," he wrote to his
+            brother, Theo, around 23 May 1889, "I can see an enclosed square of
+            wheat ... above which, in the morning, I watch the sun rise in all
+            its glory."
+          </p>
+          <a href="" class="text-darkGrey uppercase underline">go to source</a>
+        </div>
+      </article>
+      <div class="navigation mt-12">
+        <hr class="text-lightGray" />
+        <div
+          class="progress -mt-1 h-1 w-[6.6%] bg-black"
+          data-current="1"
+        ></div>
+        <div
+          class="workAndButtons mx-auto flex max-w-[90%] items-center justify-between py-4"
+        >
+          <div class="work">
+            <h2 class="text-xl font-bold">Starry Night</h2>
+            <h3 class="text-darkGrey text-sm">Vincent Van Gogh</h3>
+          </div>
+          <div class="buttons flex gap-4">
+            <img
+              src="./assets/shared/icon-back-button.svg"
+              alt=""
+              class="h-4 w-auto hover:cursor-pointer"
+              tabindex="0"
+            />
+            <img
+              src="./assets/shared/icon-next-button.svg"
+              alt=""
+              tabindex="0"
+              class="h-4 w-auto hover:cursor-pointer"
+            />
+          </div>
+        </div>
+      </div>
+    </main>
   </body>
 </html>
