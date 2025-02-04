@@ -17,6 +17,10 @@
             --grid-rows: [image-start workTitle-start] 238px [workTitle-end author-start] 128px [author-end] 194px [image-end description-start] auto [description-end];
             --grid-cols: [image-start description-start] 1fr [workTitle-start] 1fr [image-end author-start] 1fr [description-end workTitle-end author-end];
         }
+        @media (width >= 80rem) {
+            --grid-rows: [image-start workTitle-start description-start] 238px [workTitle-end] 260px [author-start] 64px [image-end description-end] 64px [author-end];
+            --grid-cols: [image-start] 425px [workTitle-start] 50px [image-end author-start] 128px [author-end] 270px [workTitle-end description-start] 1fr [description-end]; 
+        } 
     }
     .image {
         grid-area: image;

@@ -16,26 +16,46 @@
         <a href="./index.html">stop slideshow</a>
       </button>
     </header>
-    <hr class="text-lightGray mx-auto mb-6 lg:max-w-[90%]" />
+    <hr class="text-lightGray mx-auto mb-6 lg:max-w-[90%] xl:mb-12" />
+
+    <dialog
+      class="z-2 m-auto max-w-[90%] bg-transparent backdrop:bg-black/80 xl:max-w-[80%]"
+    >
+      <button class="text-darkGrey mb-8 justify-self-end uppercase">
+        close
+      </button>
+      <img src="./assets/starry-night/gallery.jpg" alt="" />
+    </dialog>
+
     <main>
       <article
         class="customGrid mx-auto grid max-w-[90%] grid-cols-(--grid-cols) grid-rows-(--grid-rows)"
       >
         <div class="image relative z-[-1]">
-          <img
-            src="./assets/starry-night/hero-small.jpg"
-            alt=""
-            class="h-[280px] w-full object-cover md:h-full"
-          />
+          <picture>
+            <source
+              srcset="./assets/starry-night/hero-large.jpg"
+              media="(min-width:1240px)"
+            />
+            <img
+              src="./assets/starry-night/hero-small.jpg"
+              alt=""
+              class="h-[280px] w-full object-cover md:h-full"
+            />
+          </picture>
           <button
-            class="absolute top-4 left-4 flex gap-4 bg-black/70 px-4 py-3 text-sm font-light text-white uppercase hover:cursor-pointer"
+            class="absolute top-4 left-4 flex gap-4 bg-black/70 px-4 py-3 text-sm font-light text-white uppercase hover:cursor-pointer md:top-[revert] md:bottom-4"
           >
             <img src="./assets/shared/icon-view-image.svg" alt="" />view image
           </button>
         </div>
-        <div class="workTitle max-w-[80%] bg-white pt-4 pb-16 pl-4">
-          <h2 class="text-3xl font-bold">Starry Night</h2>
-          <h3 class="text-darkGrey text-xl">Vincent Van Gogh</h3>
+        <div
+          class="workTitle max-w-[80%] bg-white pt-4 pb-16 pl-4 md:pt-0 md:pl-16"
+        >
+          <h2 class="text-3xl font-bold md:max-w-[6ch] md:text-[55px]">
+            Starry Night
+          </h2>
+          <h3 class="text-darkGrey text-xl md:mt-4">Vincent Van Gogh</h3>
         </div>
         <div class="authorPic">
           <img
@@ -44,11 +64,15 @@
             class="ml-4 size-16 md:size-32"
           />
         </div>
-        <div class="description relative -mt-12">
-          <p class="date text-almostWhite absolute right-0 text-[130px]">
+        <div class="description relative -mt-12 md:-mt-8 lg:-mt-16 xl:grid">
+          <p
+            class="date text-almostWhite absolute right-0 text-[130px] md:right-[revert] md:left-0 md:-ml-4 md:text-[200px]"
+          >
             1889
           </p>
-          <p class="text-darkGrey relative z-1 mt-32 mb-12">
+          <p
+            class="text-darkGrey relative z-1 mt-32 mb-12 md:mx-auto md:mt-40 md:max-w-[50ch] xl:mx-0 xl:mt-48 xl:max-w-[40ch]"
+          >
             Although The Starry Night was painted during the day in Van Gogh's
             ground-floor studio, it would be inaccurate to state that the
             picture was painted from memory. The view has been identified as the
@@ -59,7 +83,11 @@
             wheat ... above which, in the morning, I watch the sun rise in all
             its glory."
           </p>
-          <a href="" class="text-darkGrey uppercase underline">go to source</a>
+          <a
+            href="https://en.wikipedia.org/wiki/The_Starry_Nigh"
+            class="text-darkGrey uppercase underline md:mx-auto md:block md:w-[50ch] lg:m-0 xl:mt-auto xl:size-max"
+            >go to source</a
+          >
         </div>
       </article>
       <div class="navigation mt-12">
