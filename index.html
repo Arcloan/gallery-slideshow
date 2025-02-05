@@ -12,6 +12,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+    <script type="module" src="index.js"></script>
   </head>
   <body class="font-Libre">
     <header class="mx-auto flex max-w-[90%] items-center justify-between py-6">
@@ -26,9 +27,12 @@
     <main
       class="mx-auto grid max-w-[90%] md:auto-rows-[10px] md:grid-cols-2 md:gap-x-4 lg:grid-cols-4"
     >
-      <article class="relative mb-4 grid md:row-span-25">
+      <article
+        data-number="1"
+        class="relative mb-4 grid after:absolute after:inset-0 after:hidden after:bg-white/30 hover:cursor-pointer hover:after:block focus:after:block md:row-span-25"
+      >
         <img
-          src="assets/starry-night/thumbnail.jpg"
+          src="/assets/starry-night/thumbnail.jpg"
           alt=""
           class="col-[1_/_1] row-[1_/_1] h-full w-full object-cover"
         />
@@ -42,9 +46,12 @@
           <h3 class="text-almostWhite text-sm">Vincent Van Gogh</h3>
         </div>
       </article>
-      <article class="relative mb-4 grid md:row-span-[40]">
+      <article
+        data-number="2"
+        class="relative mb-4 grid after:absolute after:inset-0 after:hidden after:bg-white/30 hover:cursor-pointer hover:after:block focus:after:block md:row-span-[40]"
+      >
         <img
-          src="assets/girl-with-pearl-earring/thumbnail.jpg"
+          src="/assets/girl-with-pearl-earring/thumbnail.jpg"
           alt=""
           class="col-[1_/_1] row-[1_/_1] h-full w-full object-cover"
         />
@@ -61,9 +68,12 @@
           <h3 class="text-almostWhite text-sm">Johannes Vermeer</h3>
         </div>
       </article>
-      <article class="relative mb-4 grid md:row-span-[29]">
+      <article
+        data-number="3"
+        class="relative mb-4 grid after:absolute after:inset-0 after:hidden after:bg-white/30 hover:cursor-pointer hover:after:block focus:after:block md:row-span-[29]"
+      >
         <img
-          src="assets/guernica/thumbnail.jpg"
+          src="/assets/guernica/thumbnail.jpg"
           alt=""
           class="col-[1_/_1] row-[1_/_1] h-full w-full object-cover"
         />
@@ -77,9 +87,12 @@
           <h3 class="text-almostWhite text-sm">Pablo Picasso</h3>
         </div>
       </article>
-      <article class="relative mb-4 grid md:row-span-[25]">
+      <article
+        data-number="4"
+        class="relative mb-4 grid after:absolute after:inset-0 after:hidden after:bg-white/30 hover:cursor-pointer hover:after:block focus:after:block md:row-span-[25]"
+      >
         <img
-          src="assets/penitent-magdalene/thumbnail.jpg"
+          src="/assets/penitent-magdalene/thumbnail.jpg"
           alt=""
           class="col-[1_/_1] row-[1_/_1] h-full w-full object-cover"
         />
@@ -93,9 +106,12 @@
           <h3 class="text-almostWhite text-sm">Artemisia Gentileschi</h3>
         </div>
       </article>
-      <article class="relative mb-4 grid md:row-span-[34]">
+      <article
+        data-number="5"
+        class="relative mb-4 grid after:absolute after:inset-0 after:hidden after:bg-white/30 hover:cursor-pointer hover:after:block focus:after:block md:row-span-[34]"
+      >
         <img
-          src="assets/the-storm-on-the-sea-of-galilee/thumbnail.jpg"
+          src="/assets/the-storm-on-the-sea-of-galilee/thumbnail.jpg"
           alt=""
           class="col-[1_/_1] row-[1_/_1] h-full w-full object-cover"
         />
@@ -112,9 +128,12 @@
           <h3 class="text-almostWhite text-sm">Rembrandt</h3>
         </div>
       </article>
-      <article class="relative mb-4 grid md:row-span-[28] lg:order-8">
+      <article
+        data-number="6"
+        class="relative mb-4 grid after:absolute after:inset-0 after:hidden after:bg-white/30 hover:cursor-pointer hover:after:block focus:after:block md:row-span-[28] lg:order-8"
+      >
         <img
-          src="assets/the-great-wave-off-kanagawa/thumbnail.jpg"
+          src="/assets/the-great-wave-off-kanagawa/thumbnail.jpg"
           alt=""
           class="col-[1_/_1] row-[1_/_1] h-full w-full object-cover"
         />
@@ -128,9 +147,12 @@
           <h3 class="text-darkGrey text-sm">Hokusai</h3>
         </div>
       </article>
-      <article class="relative mb-4 grid md:row-span-[50] lg:order-7">
+      <article
+        data-number="7"
+        class="relative mb-4 grid after:absolute after:inset-0 after:hidden after:bg-white/30 hover:cursor-pointer hover:after:block focus:after:block md:row-span-[50] lg:order-7"
+      >
         <img
-          src="assets/van-gogh-self-portrait/thumbnail.jpg"
+          src="/assets/van-gogh-self-portrait/thumbnail.jpg"
           alt=""
           class="col-[1_/_1] row-[1_/_1] h-full w-full object-cover"
         />
@@ -147,9 +169,12 @@
           <h3 class="text-almostWhite text-sm">Vincent Van Gogh</h3>
         </div>
       </article>
-      <article class="relative mb-4 grid md:row-span-[25] lg:order-6">
+      <article
+        data-number="8"
+        class="relative mb-4 grid after:absolute after:inset-0 after:hidden after:bg-white/30 hover:cursor-pointer hover:after:block focus:after:block md:row-span-[25] lg:order-6"
+      >
         <img
-          src="assets/the-sleeping-gypsy/thumbnail.jpg"
+          src="/assets/the-sleeping-gypsy/thumbnail.jpg"
           alt=""
           class="col-[1_/_1] row-[1_/_1] h-full w-full object-cover"
         />
@@ -167,10 +192,11 @@
         </div>
       </article>
       <article
-        class="relative mb-4 grid md:order-10 md:row-span-[42] lg:order-10"
+        data-number="9"
+        class="relative mb-4 grid after:absolute after:inset-0 after:hidden after:bg-white/30 hover:cursor-pointer hover:after:block focus:after:block md:order-10 md:row-span-[42] lg:order-10"
       >
         <img
-          src="assets/lady-with-an-ermine/thumbnail.jpg"
+          src="/assets/lady-with-an-ermine/thumbnail.jpg"
           alt=""
           class="col-[1_/_1] row-[1_/_1] h-full w-full object-cover"
         />
@@ -188,10 +214,11 @@
         </div>
       </article>
       <article
-        class="relative mb-4 grid md:order-9 md:row-span-[26] lg:order-11"
+        data-number="10"
+        class="relative mb-4 grid after:absolute after:inset-0 after:hidden after:bg-white/30 hover:cursor-pointer hover:after:block focus:after:block md:order-9 md:row-span-[26] lg:order-11"
       >
         <img
-          src="assets/the-night-cafe/thumbnail.jpg"
+          src="/assets/the-night-cafe/thumbnail.jpg"
           alt=""
           class="col-[1_/_1] row-[1_/_1] h-full w-full object-cover"
         />
@@ -206,10 +233,11 @@
         </div>
       </article>
       <article
-        class="relative mb-4 grid md:order-11 md:row-span-[43] lg:order-9"
+        data-number="11"
+        class="relative mb-4 grid after:absolute after:inset-0 after:hidden after:bg-white/30 hover:cursor-pointer hover:after:block focus:after:block md:order-11 md:row-span-[43] lg:order-9"
       >
         <img
-          src="assets/the-basket-of-apples/thumbnail.jpg"
+          src="/assets/the-basket-of-apples/thumbnail.jpg"
           alt=""
           class="col-[1_/_1] row-[1_/_1] h-full w-full object-cover"
         />
@@ -227,10 +255,11 @@
         </div>
       </article>
       <article
-        class="relative mb-4 grid md:order-12 md:row-span-[26] lg:order-15 lg:row-span-[29]"
+        data-number="12"
+        class="relative mb-4 grid after:absolute after:inset-0 after:hidden after:bg-white/30 hover:cursor-pointer hover:after:block focus:after:block md:order-12 md:row-span-[26] lg:order-15 lg:row-span-[29]"
       >
         <img
-          src="assets/the-boy-in-the-red-vest/thumbnail.jpg"
+          src="/assets/the-boy-in-the-red-vest/thumbnail.jpg"
           alt=""
           class="col-[1_/_1] row-[1_/_1] h-full w-full object-cover"
         />
@@ -248,10 +277,11 @@
         </div>
       </article>
       <article
-        class="relative mb-4 grid md:order-13 md:row-span-[33] lg:order-14 lg:row-span-[36]"
+        data-number="13"
+        class="relative mb-4 grid after:absolute after:inset-0 after:hidden after:bg-white/30 hover:cursor-pointer hover:after:block focus:after:block md:order-13 md:row-span-[33] lg:order-14 lg:row-span-[36]"
       >
         <img
-          src="assets/arnolfini-portrait/thumbnail.jpg"
+          src="/assets/arnolfini-portrait/thumbnail.jpg"
           alt=""
           class="col-[1_/_1] row-[1_/_1] h-full w-full object-cover"
         />
@@ -266,10 +296,11 @@
         </div>
       </article>
       <article
-        class="relative mb-4 grid md:order-14 md:row-span-[51] lg:order-12"
+        data-number="14"
+        class="relative mb-4 grid after:absolute after:inset-0 after:hidden after:bg-white/30 hover:cursor-pointer hover:after:block focus:after:block md:order-14 md:row-span-[51] lg:order-12"
       >
         <img
-          src="assets/mona-lisa/thumbnail.jpg"
+          src="/assets/mona-lisa/thumbnail.jpg"
           alt=""
           class="col-[1_/_1] row-[1_/_1] h-full w-full object-cover"
         />
@@ -284,10 +315,11 @@
         </div>
       </article>
       <article
-        class="relative mb-4 grid md:order-15 md:row-span-[37] lg:order-13"
+        data-number="15"
+        class="relative mb-4 grid after:absolute after:inset-0 after:hidden after:bg-white/30 hover:cursor-pointer hover:after:block focus:after:block md:order-15 md:row-span-[37] lg:order-13"
       >
         <img
-          src="assets/the-swing/thumbnail.jpg"
+          src="/assets/the-swing/thumbnail.jpg"
           alt=""
           class="col-[1_/_1] row-[1_/_1] h-full w-full object-cover"
         />

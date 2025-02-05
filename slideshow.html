@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
+    <script type="module" src="slideshow.js"></script>
   </head>
   <body class="font-Libre">
     <header class="mx-auto flex max-w-[90%] items-center justify-between py-6">
@@ -18,48 +19,55 @@
     </header>
     <hr class="text-lightGray mx-auto mb-6 lg:max-w-[90%] xl:mb-12" />
 
-    <dialog
-      class="z-2 m-auto max-w-[90%] bg-transparent backdrop:bg-black/80 xl:max-w-[80%]"
-    >
-      <button class="text-darkGrey mb-8 justify-self-end uppercase">
-        close
-      </button>
-      <img src="./assets/starry-night/gallery.jpg" alt="" />
-    </dialog>
-
     <main>
+      <dialog
+        class="inset-0 z-2 m-auto max-h-[80vh] max-w-[80%] bg-transparent backdrop:bg-black/80"
+      >
+        <form method="dialog" class="grid">
+          <button
+            class="text-darkGrey mb-8 justify-self-end uppercase hover:cursor-pointer"
+          >
+            close
+          </button>
+        </form>
+        <img
+          src="/assets/starry-night/gallery.jpg"
+          alt=""
+          class="max-h-[70vh]"
+        />
+      </dialog>
       <article
         class="customGrid mx-auto grid max-w-[90%] grid-cols-(--grid-cols) grid-rows-(--grid-rows)"
       >
-        <div class="image relative z-[-1]">
+        <div class="image relative">
           <picture>
             <source
-              srcset="./assets/starry-night/hero-large.jpg"
+              srcset="/assets/starry-night/hero-large.jpg"
               media="(min-width:1240px)"
             />
             <img
-              src="./assets/starry-night/hero-small.jpg"
+              src="/assets/starry-night/hero-small.jpg"
               alt=""
-              class="h-[280px] w-full object-cover md:h-full"
+              class="relative z-[-1] h-[280px] w-full object-cover md:h-full"
             />
           </picture>
           <button
-            class="absolute top-4 left-4 flex gap-4 bg-black/70 px-4 py-3 text-sm font-light text-white uppercase hover:cursor-pointer md:top-[revert] md:bottom-4"
+            class="viewImage hover:bg-lightGray/30 absolute top-4 left-4 flex gap-4 bg-black/70 px-4 py-3 text-sm font-light text-white uppercase hover:cursor-pointer md:top-[revert] md:bottom-4"
           >
-            <img src="./assets/shared/icon-view-image.svg" alt="" />view image
+            <img src="/assets/shared/icon-view-image.svg" alt="" />view image
           </button>
         </div>
         <div
           class="workTitle max-w-[80%] bg-white pt-4 pb-16 pl-4 md:pt-0 md:pl-16"
         >
-          <h2 class="text-3xl font-bold md:max-w-[6ch] md:text-[55px]">
+          <h2 class="text-3xl font-bold md:max-w-[12ch] md:text-[55px]">
             Starry Night
           </h2>
           <h3 class="text-darkGrey text-xl md:mt-4">Vincent Van Gogh</h3>
         </div>
         <div class="authorPic">
           <img
-            src="./assets/starry-night/artist.jpg"
+            src="/assets/starry-night/artist.jpg"
             alt=""
             class="ml-4 size-16 md:size-32"
           />
@@ -85,7 +93,7 @@
           </p>
           <a
             href="https://en.wikipedia.org/wiki/The_Starry_Nigh"
-            class="text-darkGrey uppercase underline md:mx-auto md:block md:w-[50ch] lg:m-0 xl:mt-auto xl:size-max"
+            class="text-darkGrey uppercase underline hover:cursor-pointer hover:text-black md:mx-auto md:block md:w-[50ch] lg:m-0 xl:mt-auto xl:size-max"
             >go to source</a
           >
         </div>
@@ -104,18 +112,35 @@
             <h3 class="text-darkGrey text-sm">Vincent Van Gogh</h3>
           </div>
           <div class="buttons flex gap-4">
-            <img
-              src="./assets/shared/icon-back-button.svg"
-              alt=""
-              class="h-4 w-auto hover:cursor-pointer"
+            <svg
               tabindex="0"
-            />
-            <img
-              src="./assets/shared/icon-next-button.svg"
-              alt=""
-              tabindex="0"
-              class="h-4 w-auto hover:cursor-pointer"
-            />
+              class="hover:stroke-darkGrey stroke-black hover:cursor-pointer"
+              width="26"
+              height="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g fill="none" fill-rule="evenodd">
+                <path
+                  d="M24.166 1.843L3.627 12.113l20.539 10.269V1.843z"
+                  stroke-width="2"
+                />
+                <path fill="#D8D8D8" d="M.986.5h-1v22.775h1z" />
+              </g>
+            </svg>
+            <svg
+              width="26"
+              height="24"
+              xmlns="http://www.w3.org/2000/svg"
+              class="hover:stroke-darkGrey stroke-black hover:cursor-pointer"
+            >
+              <g fill="none" fill-rule="evenodd">
+                <path
+                  d="M1.528 1.843l20.538 10.27L1.528 22.382V1.843z"
+                  stroke-width="2"
+                />
+                <path fill="#D8D8D8" d="M24.708.5h1v22.775h-1z" />
+              </g>
+            </svg>
           </div>
         </div>
       </div>
