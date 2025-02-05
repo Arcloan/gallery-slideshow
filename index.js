@@ -1,6 +1,9 @@
 import jsonUrl from "/data.json?url";
 
-const response = await fetch(jsonUrl);
+const response = await fetch("/data.json", {headers: {
+      "Content-Type": "application/json",
+    }
+    });
 const paintings = await response.json();
 
 let currSelected = 1;
