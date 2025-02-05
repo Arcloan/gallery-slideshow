@@ -37,13 +37,13 @@ function updateDescription() {
 
 function updateImages() {
     const selectedWork = paintings[selected - 1];
-    imageContainer.querySelector("source").srcset = selectedWork.images.hero.large.slice(1);
-    imageContainer.querySelector("img").src = selectedWork.images.hero.small.slice(1);
+    imageContainer.querySelector("source").srcset = import.meta.env.BASE_URL + selectedWork.images.hero.large.slice(1);
+    imageContainer.querySelector("img").src = import.meta.env.BASE_URL + selectedWork.images.hero.small.slice(1);
 }
 
 function updateDialogImage() {
     const selectedWork = paintings[selected - 1];
-    dialogImage.src = selectedWork.images.gallery.slice(1);
+    dialogImage.src = import.meta.env.BASE_URL + selectedWork.images.gallery.slice(1);
 }
 
 function updateProgress() {
