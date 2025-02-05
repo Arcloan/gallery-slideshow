@@ -38,6 +38,7 @@ function updateDescription() {
 function updateImages() {
     const selectedWork = paintings[selected - 1];
     imageContainer.querySelector("source").srcset = import.meta.env.BASE_URL + selectedWork.images.hero.large.slice(1);
+    console.log(import.meta.env.BASE_URL + selectedWork.images.hero.large.slice(1));
     imageContainer.querySelector("img").src = import.meta.env.BASE_URL + selectedWork.images.hero.small.slice(1);
 }
 
