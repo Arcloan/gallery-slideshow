@@ -1,10 +1,9 @@
-import jsonUrl from "/data.json?url";
-
-const response = await fetch("/data.json", {headers: {
+const response = await fetch(import.meta.env.BASE_URL + "/data.json", {headers: {
       "Content-Type": "application/json",
-    }
+        }
     });
 const paintings = await response.json();
+console.log(import.meta.env.BASE_URL + "/data.json");
 
 let currSelected = 1;
 
