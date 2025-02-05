@@ -24,7 +24,7 @@ function updateWork() {
 
 function updateAuthorPic() {
     const selectedWork = paintings[selected - 1];
-    const url = selectedWork.artist.image.slice(1);
+    const url = import.meta.env.BASE_URL + selectedWork.artist.image.slice(1);
     authorPic.src = url;
 }
 
@@ -38,7 +38,6 @@ function updateDescription() {
 function updateImages() {
     const selectedWork = paintings[selected - 1];
     imageContainer.querySelector("source").srcset = import.meta.env.BASE_URL + selectedWork.images.hero.large.slice(1);
-    console.log(import.meta.env.BASE_URL + selectedWork.images.hero.large.slice(1));
     imageContainer.querySelector("img").src = import.meta.env.BASE_URL + selectedWork.images.hero.small.slice(1);
 }
 
