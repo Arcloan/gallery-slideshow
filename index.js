@@ -5,8 +5,9 @@ let currSelected = 1;
 
 const container = document.querySelector("main");
 container.addEventListener("click", e => {
-    if (! e.target.hasAttribute("data-number")) return;
-    currSelected = Number(e.target.dataset.number);
+    console.log("Here");
+    if (! e.target.closest("[data-number]")) return;
+    currSelected = Number(e.target.closest("[data-number]").dataset.number);
     sessionStorage.setItem("current", String(currSelected));
     window.location.href = "./slideshow.html";
 })
