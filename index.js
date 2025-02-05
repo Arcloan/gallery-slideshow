@@ -1,4 +1,6 @@
-const response = await fetch("/data.json");
+import jsonUrl from "/data.json?url";
+
+const response = await fetch(jsonUrl);
 const paintings = await response.json();
 
 let currSelected = 1;
